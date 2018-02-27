@@ -3,6 +3,7 @@
 #include "TankPlayerController.h"
 #include "Engine/World.h"
 #include "Camera/PlayerCameraManager.h"
+#include "Tank.h"
 
 void ATankPlayerController::BeginPlay()
 {
@@ -40,7 +41,7 @@ ATank* ATankPlayerController::GetControlledTank() const
 void ATankPlayerController::AimTowardCrosshair()
 {
 	if (!GetControlledTank()) { return; }
-		
+
 	FVector HitLocation; // Out parameter
 	
 	if(GetSightRayHitLocation(HitLocation)) // Has "side-effect", is going to line trace
