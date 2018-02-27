@@ -22,13 +22,13 @@ public:
 
 private:
 	
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 		float CrossHairXLocation = 0.5f;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 		float CrossHairYLocation = 0.33333f;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 		float LineTraceRange = 1000000.0f;
 
 	ATank * GetControlledTank() const;
