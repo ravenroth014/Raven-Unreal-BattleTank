@@ -30,5 +30,4 @@ public:
 
 private:
 	UStaticMeshComponent * Barrel = nullptr;
-	
 };
