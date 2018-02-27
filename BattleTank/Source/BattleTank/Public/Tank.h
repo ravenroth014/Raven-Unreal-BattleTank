@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "Projectile.h"
 #include "Tank.generated.h"
 
 class UTankBarrel;
@@ -44,4 +45,10 @@ public:
 private:
 	UPROPERTY(EditAnywhere, Category = Firing)
 		float LaunchSpeed = 4000; 
+
+	UPROPERTY(EditAnywhere, Category = Setup)
+		TSubclassOf<AProjectile> ProjectileBlueprint; // Alternative
+
+	// Local barrel reference for spawn
+	UTankBarrel* Barrel = nullptr;
 };
