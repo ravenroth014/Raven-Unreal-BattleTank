@@ -54,6 +54,9 @@ private:
 
 	// Local barrel reference for spawn
 	UTankBarrel* Barrel = nullptr;
+<<<<<<< HEAD
 
 	double LastFireTime = 0;
+=======
+>>>>>>> parent of c951f4a... Make AI's tank fire.
 };
