@@ -16,7 +16,6 @@ ATank::ATank()
 
 	// NO need to protect points as added at construction
 	TankAimComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
-	TankMovementComponent = CreateDefaultSubobject<UTankMovementComponent>(FName("Movement Component"));
 }
 
 // Called when the game starts or when spawned
@@ -65,4 +64,5 @@ void ATank::Fire()
 		Projectile->LaunchProjectile(LaunchSpeed);
 		LastFireTime = FPlatformTime::Seconds();
 	}
+	else if (!Barrel) { return; }
 }
