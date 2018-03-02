@@ -20,6 +20,10 @@ public:
 
 	virtual void Tick(float DeltaSeconds) override;
 
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		ATank * GetControlledTank() const;
+
 private:
 	
 	UPROPERTY(EditDefaultsOnly)
@@ -31,7 +35,7 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 		float LineTraceRange = 1000000.0f;
 
-	ATank * GetControlledTank() const;
+	
 
 	// Start the tank moving the barrel so that a shot would it where
 	// the crosshair intersects the world
